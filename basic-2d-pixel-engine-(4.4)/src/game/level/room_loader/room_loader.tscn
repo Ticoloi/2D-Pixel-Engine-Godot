@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://drm2on1jk0jn2"]
-
-[ext_resource type="Script" uid="uid://d4bwk03w1iih1" path="res://src/game/level/room_loader/room_loader.gd" id="1_1786c"]
-
-[node name="RoomLoader" type="Node"]
-script = ExtResource("1_1786c")

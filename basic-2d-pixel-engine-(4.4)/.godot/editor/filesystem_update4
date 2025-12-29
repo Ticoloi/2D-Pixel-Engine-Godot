@@ -1,5 +1,0 @@
-res://src/game/core/main/main.tscn
-res://resources/godot/animated_sprites/character/blue_ninja.tres
-res://resources/godot/animated_sprites/character/knight.tres
-res://src/game/core/main_viewport/main_viewport.tscn
-res://src/game/ui/pause_menu/pause_menu.tscn
