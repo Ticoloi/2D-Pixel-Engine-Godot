@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ddy4j4mm0ynlk"
+path="res://.godot/imported/4 - Village.ogg-3c9755fcc8238ad8eb021efa80d81868.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/test/NinjaAdventure/NinjaAdventure/Musics/4 - Village.ogg"
+dest_files=["res://.godot/imported/4 - Village.ogg-3c9755fcc8238ad8eb021efa80d81868.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

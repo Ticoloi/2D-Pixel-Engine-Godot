@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crj5wlgj5te8s"
+path="res://.godot/imported/30 - Ruins.ogg-50855471763ee2ee8b15f4f58eef2a9b.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/test/NinjaAdventure/NinjaAdventure/Musics/30 - Ruins.ogg"
+dest_files=["res://.godot/imported/30 - Ruins.ogg-50855471763ee2ee8b15f4f58eef2a9b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

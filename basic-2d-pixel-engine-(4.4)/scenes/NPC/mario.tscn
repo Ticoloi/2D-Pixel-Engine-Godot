@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://jm81ehnvclna"]
+
+[ext_resource type="PackedScene" uid="uid://c5dliid2grbha" path="res://src/game/objects/components/hitbox/hitbox_component.tscn" id="1_smwkp"]
+[ext_resource type="PackedScene" uid="uid://uoo02y5kf5xd" path="res://assets/Nintendo 64 - Super Mario 64 - Mario/mario.dae" id="2_3lfcp"]
+[ext_resource type="Script" uid="uid://cjhes2f70tcma" path="res://assets/Nintendo 64 - Super Mario 64 - Mario/mario.gd" id="3_vrmh3"]
+[ext_resource type="PackedScene" uid="uid://cvgq16e404gxw" path="res://src/game/objects/components/talk/talk_component.tscn" id="4_groif"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0yvg7"]
+radius = 15.0
+height = 64.0
+
+[node name="Mario" type="CharacterBody2D"]
+
+[node name="HitboxComponent" parent="." instance=ExtResource("1_smwkp")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(-55, -37)
+shape = SubResource("CapsuleShape2D_0yvg7")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = -104.0
+offset_top = -100.0
+offset_right = -4.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(100, 100)
+render_target_update_mode = 4
+
+[node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport"]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.3985, 38.6776)
+
+[node name="mario" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_3lfcp")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+script = ExtResource("3_vrmh3")
+
+[node name="TalkComponent" parent="." instance=ExtResource("4_groif")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-55, -37)
+shape = SubResource("CapsuleShape2D_0yvg7")
+
+[connection signal="interacted" from="HitboxComponent" to="TalkComponent" method="_on_hitbox_component_interacted"]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://o610rh2ieogl"]
+
+[ext_resource type="Script" uid="uid://dqehinw3v6nqx" path="res://src/game/ui/main_menu/main_menu.gd" id="1_gmjeh"]
+[ext_resource type="PackedScene" uid="uid://bkojxhk5qkmwv" path="res://src/game/ui/etc/button/button_1.tscn" id="1_x4b0t"]
+[ext_resource type="Texture2D" uid="uid://66pngleffnnb" path="res://20230331-_3310122-edit-ftsmithphotos.jpg" id="3_5cqwy"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gmjeh")
+
+[node name="Play" parent="." instance=ExtResource("1_x4b0t")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.5
+offset_top = -28.0
+offset_right = 75.5
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 40
+text = "Play"
+
+[node name="Config" parent="." instance=ExtResource("1_x4b0t")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = 42.0
+offset_right = 68.0
+offset_bottom = 78.0
+text = "Config"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_5cqwy")
+expand_mode = 5
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

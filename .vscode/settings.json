@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "chrono": "cpp"
+    },
+    "cmake.sourceDirectory": "/home/eloi/Documents/godot/pixel_tools/godot-cpp/test"
+}

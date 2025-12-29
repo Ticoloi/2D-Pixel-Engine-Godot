@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7xvq1eli2yuf"]
+
+[ext_resource type="Script" uid="uid://dfu4vab6g5q2k" path="res://src/game/core/main_viewport/main_viewport.gd" id="1_0ltc4"]
+[ext_resource type="PackedScene" uid="uid://o610rh2ieogl" path="res://src/game/ui/main_menu/main_menu.tscn" id="1_lf5xj"]
+
+[node name="MainViewport" type="SubViewportContainer"]
+texture_filter = 1
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 2
+script = ExtResource("1_0ltc4")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+snap_2d_vertices_to_pixel = true
+canvas_item_default_texture_filter = 0
+gui_snap_controls_to_pixels = false
+sdf_scale = 0
+size = Vector2i(640, 360)
+render_target_update_mode = 4
+
+[node name="Main_Menu" parent="SubViewport" instance=ExtResource("1_lf5xj")]

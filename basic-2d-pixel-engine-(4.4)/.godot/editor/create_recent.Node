@@ -1,0 +1,15 @@
+RoomChangeComponent
+CollisionShape2D
+CharacterInteraction
+Player
+Actor
+Node
+Camera2D
+AnimatedSprite2D
+EditorPlugin
+CharacterBody2D
+CharacterNode
+SubViewportContainer
+Camera3D
+Node3D
+SubViewport
